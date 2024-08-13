@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import axiosInstance from "../api";
 import Navbar from "./NavBar";
+import Footer from "./Footer";
 
 function ProductDisplay() {
   const [products, setProducts] = useState([]);
@@ -52,7 +53,7 @@ function ProductDisplay() {
               <p className="text-gray-700 mb-4">${item.price}</p>
               <div className="flex justify-between">
                 <button 
-                  className="bg-violet-400 text-white px-4 py-2 rounded" 
+                  className="bg-orange-300 text-white px-4 py-2 rounded" 
                   onClick={() => handleViewDetails(item)}
                 >
                   View Details
@@ -93,7 +94,8 @@ function ProductDisplay() {
           </div>
         </div>
       )}
-    </div>
+      </div>
+      <Footer/>
     </>
   );
 }
